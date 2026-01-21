@@ -65,6 +65,7 @@ function createWeekElement(week) {
   section.className = 'fade-in';
 
   const weekDate = new Date(week.weekOf + 'T00:00:00');
+  
   const formattedDate = weekDate.toLocaleDateString('en-US', {
     month: 'long',
     day: 'numeric',

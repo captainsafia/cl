@@ -1,27 +1,32 @@
 {
   "weeks": [
     {
-      "weekOf": "2026-01-20",
+      "weekOf": "2026-01-19",
       "entries": [
         {
           "summary": "Fixed TLS vendoring and OpenSSL CI dependencies for cross-platform builds in Hone",
           "repo": "captainsafia/hone",
           "url": "https://github.com/captainsafia/hone/commit/720e5e6"
-        }
-      ]
-    },
-    {
-      "weekOf": "2026-01-13",
-      "entries": [
-        {
-          "summary": "Shipped relnotify - a Rust library for checking GitHub release updates",
-          "repo": "captainsafia/relnotify",
-          "url": "https://github.com/captainsafia/relnotify/commit/a89b2bf3"
         },
         {
           "summary": "Added update check and self-update command to Hone CLI",
           "repo": "captainsafia/hone",
           "url": "https://github.com/captainsafia/hone/commit/183579b"
+        },
+        {
+          "summary": "Added VS Code extension bundling and improved LSP server startup in Hone",
+          "repo": "captainsafia/hone",
+          "url": "https://github.com/captainsafia/hone/commit/b1065f5"
+        }
+      ]
+    },
+    {
+      "weekOf": "2026-01-12",
+      "entries": [
+        {
+          "summary": "Shipped relnotify - a Rust library for checking GitHub release updates",
+          "repo": "captainsafia/relnotify",
+          "url": "https://github.com/captainsafia/relnotify/commit/a89b2bf3"
         },
         {
           "summary": "Major improvements to Hone LSP: fixed UTF-16 handling, semantic tokens, and diagnostics",
@@ -36,17 +41,12 @@
       ]
     },
     {
-      "weekOf": "2026-01-06",
+      "weekOf": "2026-01-05",
       "entries": [
         {
           "summary": "Bumped Grove to v1.3.0 with PR checkout to worktree support",
           "repo": "captainsafia/grove",
           "url": "https://github.com/captainsafia/grove/commit/d9f63152"
-        },
-        {
-          "summary": "Added VS Code extension bundling and improved LSP server startup in Hone",
-          "repo": "captainsafia/hone",
-          "url": "https://github.com/captainsafia/hone/commit/b1065f5"
         },
         {
           "summary": "Introduced automation hooks for generating docs issues from PRs in Aspire",
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "weekOf": "2025-12-30",
+      "weekOf": "2025-12-29",
       "entries": [
         {
           "summary": "Implemented finish functionality with auto-detection and cascade in Stitch",
@@ -77,17 +77,17 @@
           "summary": "Shipped gh-release-update-notifier - a library for checking GitHub release updates",
           "repo": "captainsafia/gh-release-update-notifier",
           "url": "https://github.com/captainsafia/gh-release-update-notifier/commit/8decc1c8"
-        }
-      ]
-    },
-    {
-      "weekOf": "2025-12-23",
-      "entries": [
+        },
         {
           "summary": "Shipped Stitch with MCP server, self-update, --json flag, and 'current' shorthand",
           "repo": "captainsafia/stitch",
           "url": "https://github.com/captainsafia/stitch/commit/6ef8b896"
-        },
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-12-22",
+      "entries": [
         {
           "summary": "Enhanced Burrow export with shell auto-detection and multiple format support",
           "repo": "captainsafia/burrow",
@@ -97,12 +97,7 @@
           "summary": "Migrated Burrow storage from JSON to SQLite with encryption at rest",
           "repo": "captainsafia/burrow",
           "url": "https://github.com/captainsafia/burrow/commit/ddd1e9d8"
-        }
-      ]
-    },
-    {
-      "weekOf": "2025-12-22",
-      "entries": [
+        },
         {
           "summary": "Shipped Burrow v1.0.0 - a CLI tool for secure local secret management",
           "repo": "captainsafia/burrow",
@@ -111,7 +106,7 @@
       ]
     },
     {
-      "weekOf": "2025-12-16",
+      "weekOf": "2025-12-15",
       "entries": [
         {
           "summary": "Shipped Grove as compiled binaries with macOS notarization",
@@ -127,12 +122,7 @@
           "summary": "Added self-update and sync commands to Grove",
           "repo": "captainsafia/grove",
           "url": "https://github.com/captainsafia/grove/commit/7b0a9831"
-        }
-      ]
-    },
-    {
-      "weekOf": "2025-12-15",
-      "entries": [
+        },
         {
           "summary": "Added add and remove commands to Grove for worktree management",
           "repo": "captainsafia/grove",
@@ -157,17 +147,17 @@
           "summary": "Removed deprecated DefaultContainerRegistry property from Aspire hosting",
           "repo": "dotnet/aspire",
           "url": "https://github.com/dotnet/aspire/commit/f6543e3"
-        },
-        {
-          "summary": "Added resource endpoint display for Docker Compose deployments",
-          "repo": "dotnet/aspire",
-          "url": "https://github.com/dotnet/aspire/commit/661c604"
         }
       ]
     },
     {
       "weekOf": "2025-12-01",
       "entries": [
+        {
+          "summary": "Added resource endpoint display for Docker Compose deployments",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/661c604"
+        },
         {
           "summary": "Added support for per-resource container image configuration options",
           "repo": "dotnet/aspire",
@@ -297,12 +287,7 @@
           "summary": "Added init command to Grove for setting up worktree-based repos",
           "repo": "captainsafia/grove",
           "url": "https://github.com/captainsafia/grove/commit/9361ba91"
-        }
-      ]
-    },
-    {
-      "weekOf": "2025-09-22",
-      "entries": [
+        },
         {
           "summary": "Shipped Grove v1.0 - a CLI for managing git worktrees",
           "repo": "captainsafia/grove",
@@ -472,7 +457,12 @@
           "summary": "Fixed validations generator to skip non-public properties",
           "repo": "dotnet/aspnetcore",
           "url": "https://github.com/dotnet/aspnetcore/commit/e7ebb34"
-        },
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-07-28",
+      "entries": [
         {
           "summary": "Set up Azure deployer and provisioning context prompting",
           "repo": "dotnet/aspire",
@@ -652,17 +642,17 @@
           "summary": "Added strongly-typed ContainerPort and ContainerImage support",
           "repo": "dotnet/aspire",
           "url": "https://github.com/dotnet/aspire/commit/ecf7392"
-        },
-        {
-          "summary": "Fixed handling of nullable types and IValidatableObject in validations generator",
-          "repo": "dotnet/aspnetcore",
-          "url": "https://github.com/dotnet/aspnetcore/commit/0b3cd8c"
         }
       ]
     },
     {
       "weekOf": "2025-04-28",
       "entries": [
+        {
+          "summary": "Fixed handling of nullable types and IValidatableObject in validations generator",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/0b3cd8c"
+        },
         {
           "summary": "Added hosting integration for Azure Container Registry in Aspire",
           "repo": "dotnet/aspire",
