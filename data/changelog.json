@@ -1,0 +1,934 @@
+{
+  "weeks": [
+    {
+      "weekOf": "2026-01-20",
+      "entries": [
+        {
+          "summary": "Fixed TLS vendoring and OpenSSL CI dependencies for cross-platform builds in Hone",
+          "repo": "captainsafia/hone",
+          "url": "https://github.com/captainsafia/hone/commit/720e5e6"
+        }
+      ]
+    },
+    {
+      "weekOf": "2026-01-13",
+      "entries": [
+        {
+          "summary": "Shipped relnotify - a Rust library for checking GitHub release updates",
+          "repo": "captainsafia/relnotify",
+          "url": "https://github.com/captainsafia/relnotify/commit/a89b2bf3"
+        },
+        {
+          "summary": "Added update check and self-update command to Hone CLI",
+          "repo": "captainsafia/hone",
+          "url": "https://github.com/captainsafia/hone/commit/183579b"
+        },
+        {
+          "summary": "Major improvements to Hone LSP: fixed UTF-16 handling, semantic tokens, and diagnostics",
+          "repo": "captainsafia/hone",
+          "url": "https://github.com/captainsafia/hone/commit/b899b5b"
+        },
+        {
+          "summary": "Added automation for creating documentation issues from pull requests in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/4a31f2f"
+        }
+      ]
+    },
+    {
+      "weekOf": "2026-01-06",
+      "entries": [
+        {
+          "summary": "Bumped Grove to v1.3.0 with PR checkout to worktree support",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/d9f63152"
+        },
+        {
+          "summary": "Added VS Code extension bundling and improved LSP server startup in Hone",
+          "repo": "captainsafia/hone",
+          "url": "https://github.com/captainsafia/hone/commit/b1065f5"
+        },
+        {
+          "summary": "Introduced automation hooks for generating docs issues from PRs in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/c019ae6"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-12-30",
+      "entries": [
+        {
+          "summary": "Implemented finish functionality with auto-detection and cascade in Stitch",
+          "repo": "captainsafia/stitch",
+          "url": "https://github.com/captainsafia/stitch/commit/f2fe33dc"
+        },
+        {
+          "summary": "Added autoload support for Burrow secrets and fixed hook state caching",
+          "repo": "captainsafia/burrow",
+          "url": "https://github.com/captainsafia/burrow/commit/443719753"
+        },
+        {
+          "summary": "Added update notifications and self-update command to Grove",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/2864ab86"
+        },
+        {
+          "summary": "Shipped gh-release-update-notifier - a library for checking GitHub release updates",
+          "repo": "captainsafia/gh-release-update-notifier",
+          "url": "https://github.com/captainsafia/gh-release-update-notifier/commit/8decc1c8"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-12-23",
+      "entries": [
+        {
+          "summary": "Shipped Stitch with MCP server, self-update, --json flag, and 'current' shorthand",
+          "repo": "captainsafia/stitch",
+          "url": "https://github.com/captainsafia/stitch/commit/6ef8b896"
+        },
+        {
+          "summary": "Enhanced Burrow export with shell auto-detection and multiple format support",
+          "repo": "captainsafia/burrow",
+          "url": "https://github.com/captainsafia/burrow/commit/2be53e09"
+        },
+        {
+          "summary": "Migrated Burrow storage from JSON to SQLite with encryption at rest",
+          "repo": "captainsafia/burrow",
+          "url": "https://github.com/captainsafia/burrow/commit/ddd1e9d8"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-12-22",
+      "entries": [
+        {
+          "summary": "Shipped Burrow v1.0.0 - a CLI tool for secure local secret management",
+          "repo": "captainsafia/burrow",
+          "url": "https://github.com/captainsafia/burrow/commit/ffa30f1c"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-12-16",
+      "entries": [
+        {
+          "summary": "Shipped Grove as compiled binaries with macOS notarization",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/656bc75d"
+        },
+        {
+          "summary": "Added 'go' command to Grove for quick navigation to worktrees",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/0595be35"
+        },
+        {
+          "summary": "Added self-update and sync commands to Grove",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/7b0a9831"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-12-15",
+      "entries": [
+        {
+          "summary": "Added add and remove commands to Grove for worktree management",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/3fed99a1"
+        },
+        {
+          "summary": "Fixed deployment failures for resources marked with ExcludeFromManifest",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/e0feeec"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-12-08",
+      "entries": [
+        {
+          "summary": "Improved container image handling with flexible registry resolution for Docker Compose deployments",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/ce27ff3"
+        },
+        {
+          "summary": "Removed deprecated DefaultContainerRegistry property from Aspire hosting",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/f6543e3"
+        },
+        {
+          "summary": "Added resource endpoint display for Docker Compose deployments",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/661c604"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-12-01",
+      "entries": [
+        {
+          "summary": "Added support for per-resource container image configuration options",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/762bb5c"
+        },
+        {
+          "summary": "Refactored ContainerBuildOptions to use resource-specific annotations",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/513baea"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-11-24",
+      "entries": [
+        {
+          "summary": "Updated Aspire CLI to target .NET 10.0",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/77e2f40"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-11-03",
+      "entries": [
+        {
+          "summary": "Fixed missing Azure Container Registry login dependency for App Service deployments",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/6b30795"
+        },
+        {
+          "summary": "Added 'do' command to runtime-only check in Aspire CLI",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/6718a30"
+        },
+        {
+          "summary": "Shipped Docker Compose deployment support in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/d7c175b"
+        },
+        {
+          "summary": "Added --force flag to Grove worktree remove command",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/326bd679"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-10-27",
+      "entries": [
+        {
+          "summary": "Added initial Docker Compose deployment support for Aspire applications",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/3ec0e7a"
+        },
+        {
+          "summary": "Fixed Grove worktree list streaming to handle large repos",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/c04bb6cf"
+        },
+        {
+          "summary": "Migrated Grove from Go to TypeScript",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/3abed3e6"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-10-20",
+      "entries": [
+        {
+          "summary": "Introduced pipeline-based publish model for Aspire deployments",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/6e345ef"
+        },
+        {
+          "summary": "Added support for executing individual deployment steps with dependencies",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/d0fa49c"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-10-13",
+      "entries": [
+        {
+          "summary": "Renamed ActivityReporter and added auto-creation of publishing steps",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/46b8881"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-10-06",
+      "entries": [
+        {
+          "summary": "Added initial support for modeling deployment pipelines in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/5f92329"
+        },
+        {
+          "summary": "Revamped activity reporter to support parallel steps and tasks",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/178d2cd"
+        },
+        {
+          "summary": "Added 'prune --older-than' flag to Grove for cleaning up old worktrees",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/5ba4dd6c"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-09-29",
+      "entries": [
+        {
+          "summary": "Fixed run-mode specific prompts in parameter processing",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/f62ee00"
+        },
+        {
+          "summary": "Improved Grove list command performance using git status",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/78cce9a8"
+        },
+        {
+          "summary": "Added init command to Grove for setting up worktree-based repos",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/9361ba91"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-09-22",
+      "entries": [
+        {
+          "summary": "Shipped Grove v1.0 - a CLI for managing git worktrees",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/20911bfe"
+        },
+        {
+          "summary": "Added initial list and prune commands to Grove",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/66e044ee"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-09-15",
+      "entries": [
+        {
+          "summary": "Added support for prompting users about generated values during Azure deployments",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/369e8b2"
+        },
+        {
+          "summary": "Prioritized Azure CLI credentials for deployment scenarios",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/b59f975"
+        },
+        {
+          "summary": "Improved deployment error display on a per-resource basis",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/62041b1"
+        },
+        {
+          "summary": "Fixed Dockerfile build arguments and secrets handling",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/1698c52"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-09-08",
+      "entries": [
+        {
+          "summary": "Added unique image tags per deployment and refactored container image builder APIs",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/6783b42"
+        },
+        {
+          "summary": "Fixed Markdown link rendering in Aspire CLI output",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/7942f38"
+        },
+        {
+          "summary": "Added prompting and step/task support in debug mode",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/9eaeffa"
+        },
+        {
+          "summary": "Parallelized more deployment steps for faster Azure deployments",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/8284f4a"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-09-01",
+      "entries": [
+        {
+          "summary": "Added prompting for unresolved parameters during deployment",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/b024fa4"
+        },
+        {
+          "summary": "Added publishing step for fetching Azure subscription IDs and regions",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/65787f8"
+        },
+        {
+          "summary": "Split publish and deploy phases with unified dependency graphs",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/8942905"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-08-25",
+      "entries": [
+        {
+          "summary": "Switched to deploying individual Bicep modules instead of main.bicep",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/6113a04"
+        },
+        {
+          "summary": "Split provisioning context between run-mode and publish-mode",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/1d604cd"
+        },
+        {
+          "summary": "Verified Azure Functions and multi-compute environment deployments",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/cfb79b0"
+        },
+        {
+          "summary": "Added myself to Aspire CODEOWNERS file",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/0a1a191"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-08-18",
+      "entries": [
+        {
+          "summary": "Added support for deploying compute images and resources to Azure",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/95be0ad"
+        },
+        {
+          "summary": "Improved error handling for Azure deployer failures",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/f1493c7"
+        },
+        {
+          "summary": "Added nullable type modeling using oneOf in ASP.NET Core OpenAPI schemas",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/1a9343b"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-08-11",
+      "entries": [
+        {
+          "summary": "Hooked up Azure Deployer to BicepProvisioner in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/1d7256f"
+        },
+        {
+          "summary": "Fixed relative JSON schema reference resolution in OpenAPI documents",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/d757bfd"
+        },
+        {
+          "summary": "Standardized pattern for property comments in OpenAPI schemas",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/9941a37"
+        },
+        {
+          "summary": "Added support for XML comments on [AsParameters] in OpenAPI",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/a7e8fa4"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-08-04",
+      "entries": [
+        {
+          "summary": "Fixed enum default value handling in Request Delegate Factory and Generator",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/4f805f0"
+        },
+        {
+          "summary": "Improved IResult metadata handling for IEndpointMetadataProvider implementations",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/d72b3c2"
+        },
+        {
+          "summary": "Fixed validations generator to skip non-public properties",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/e7ebb34"
+        },
+        {
+          "summary": "Set up Azure deployer and provisioning context prompting",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/0ca3075"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-07-21",
+      "entries": [
+        {
+          "summary": "Added deprecation warning for OpenAPI analyzers in .NET SDK",
+          "repo": "dotnet/sdk",
+          "url": "https://github.com/dotnet/sdk/commit/72226a6"
+        },
+        {
+          "summary": "Put DeployCommand behind a feature flag in Aspire CLI",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/e9c53d2"
+        },
+        {
+          "summary": "Cleaned up publish/deploy command infrastructure with context-sensitive completion messages",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/929b805"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-07-14",
+      "entries": [
+        {
+          "summary": "Hardened Docker container runtime health checks in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/f611600"
+        },
+        {
+          "summary": "Added error handling for unhealthy container runtime during image builds",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/fc66a25"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-07-07",
+      "entries": [
+        {
+          "summary": "Removed SiteExtensions from ASP.NET Core solution",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/57641e8"
+        },
+        {
+          "summary": "Updated Azure Functions Core Tools to latest version",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/75d7668"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-06-30",
+      "entries": [
+        {
+          "summary": "Deduplicated shared backchannel types in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/590ede6"
+        },
+        {
+          "summary": "Fixed promptText formatting in selection output",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/c05c187"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-06-23",
+      "entries": [
+        {
+          "summary": "Implemented CLI prompting on top of InteractionService in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/5f415f7"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-06-16",
+      "entries": [
+        {
+          "summary": "Updated PublishingActivityProgressReporter to support step/task views",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/b3fcf36"
+        },
+        {
+          "summary": "Updated Microsoft.OpenApi to preview28",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/ee050bd"
+        },
+        {
+          "summary": "Updated namespace for interceptors used by ValidationsGenerator in SDK",
+          "repo": "dotnet/sdk",
+          "url": "https://github.com/dotnet/sdk/commit/b7310cb"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-06-09",
+      "entries": [
+        {
+          "summary": "Added support for DeployCommand and DeployingCallbackAnnotation in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/03b49a3"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-05-26",
+      "entries": [
+        {
+          "summary": "Updated Copilot instructions for ASP.NET Core repository",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/e849f20"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-05-19",
+      "entries": [
+        {
+          "summary": "Created Copilot setup files and instructions for ASP.NET Core repository",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/a79c13d"
+        },
+        {
+          "summary": "Added support for setting existing app identity on compute resources in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/f6cd6b4"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-05-12",
+      "entries": [
+        {
+          "summary": "Fixed type name sanitization and trim annotations in validations generator",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/944f0f5"
+        },
+        {
+          "summary": "Added support for mapping XML <returns> to OpenAPI response descriptions",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/debb78a"
+        },
+        {
+          "summary": "Exempted DI-resolved parameters from validation",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/343594e"
+        },
+        {
+          "summary": "Set interceptors property for validations source generator in SDK",
+          "repo": "dotnet/sdk",
+          "url": "https://github.com/dotnet/sdk/commit/6e5ee83"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-05-05",
+      "entries": [
+        {
+          "summary": "Shipped AzureEnvironmentResource for publishing Azure resources in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/873fbf0"
+        },
+        {
+          "summary": "Added support for user-assigned identities in Aspire Azure deployments",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/74a965b"
+        },
+        {
+          "summary": "Added strongly-typed ContainerPort and ContainerImage support",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/ecf7392"
+        },
+        {
+          "summary": "Fixed handling of nullable types and IValidatableObject in validations generator",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/0b3cd8c"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-04-28",
+      "entries": [
+        {
+          "summary": "Added hosting integration for Azure Container Registry in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/d373c8a"
+        },
+        {
+          "summary": "Fixed handling of parsable types in validations generator",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/21ba24a"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-04-21",
+      "entries": [
+        {
+          "summary": "Updated to Microsoft.OpenApi v2.0.0-preview.17",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/bc1b3b2"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-04-14",
+      "entries": [
+        {
+          "summary": "Fixed record type handling in validations source generator",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/c22a853"
+        },
+        {
+          "summary": "Modeled Docker Compose as a compute environment resource in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/1db6fb2"
+        },
+        {
+          "summary": "Added IOpenApiDocumentProvider interface and implementation",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/2c0bb03"
+        },
+        {
+          "summary": "Captured container registry information in Container App Environment",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/eba2565"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-03-31",
+      "entries": [
+        {
+          "summary": "Hardened generic type argument handling in OpenAPI source generator",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/9c67617"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-03-24",
+      "entries": [
+        {
+          "summary": "Fixed Azure Functions connection key handling for Table Storage",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/85bb918"
+        },
+        {
+          "summary": "Fixed Cosmos child resource connection strings with access key authentication",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/9347e78"
+        },
+        {
+          "summary": "Added Cosmos database builder pattern for child containers",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/85566cf"
+        },
+        {
+          "summary": "Added deep-linking support for Azure WebPubSub and Service Bus child resources",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/6fcd5cd"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-03-17",
+      "entries": [
+        {
+          "summary": "Added CosmosDB child resource support in client integration",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/143d7a1"
+        },
+        {
+          "summary": "Removed role assignments on implicit storage accounts in Aspire",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/72f1dd9"
+        },
+        {
+          "summary": "Added support for generating OpenAPI schemas from transformers",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/80435a6"
+        },
+        {
+          "summary": "Fixed OpenAPI XML code generation",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/06f3c41"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-03-10",
+      "entries": [
+        {
+          "summary": "Added trim-safe ValidationContext constructor to .NET Runtime",
+          "repo": "dotnet/runtime",
+          "url": "https://github.com/dotnet/runtime/commit/520feeb"
+        },
+        {
+          "summary": "Fixed named configuration handling in DbContext-based clients",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/6c57229"
+        },
+        {
+          "summary": "Shipped input validation for minimal APIs via generic resolver model",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/f470910"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-03-03",
+      "entries": [
+        {
+          "summary": "Added Azure Functions host support for Table Storage resources",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/c4e4092"
+        },
+        {
+          "summary": "Updated to Microsoft.OpenApi v2.0.0-preview.11",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/bd7a372"
+        },
+        {
+          "summary": "Added support for --useHttps flag on Azure Functions applications",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/35778c3"
+        },
+        {
+          "summary": "Added ServerSentEventsResult and extension methods to ASP.NET Core",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/bd1ba76"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-02-24",
+      "entries": [
+        {
+          "summary": "Added support for resolving OpenAPI server URLs from HttpRequest",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/8b77ff5"
+        },
+        {
+          "summary": "Added System.Net.ServerSentEvents to the .NET Runtime shared framework",
+          "repo": "dotnet/runtime",
+          "url": "https://github.com/dotnet/runtime/commit/478cfe2"
+        },
+        {
+          "summary": "Contributed documentation on existing resource strategies in Aspire",
+          "repo": "dotnet/docs-aspire",
+          "url": "https://github.com/dotnet/docs-aspire/commit/f4a151c"
+        },
+        {
+          "summary": "Added support for AddOpenApiOperationTransformer API",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/7aa28a7"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-02-17",
+      "entries": [
+        {
+          "summary": "Fixed property handling on existing Azure SQL server resources",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/9e7c91d"
+        },
+        {
+          "summary": "Set up initial validations generator infrastructure",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/48d9b82"
+        },
+        {
+          "summary": "Fixed double --port flag issue for Azure Functions",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/97d5c1c"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-02-10",
+      "entries": [
+        {
+          "summary": "Upgraded to OpenAPI.NET v2.0.0-preview7 with XML doc comment support",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/58ac2f7"
+        },
+        {
+          "summary": "Fixed AsExisting method namespaces and logging",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/2a3f44f"
+        },
+        {
+          "summary": "Supported multi-version snapshot tests for OpenAPI",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/53e9559"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-02-03",
+      "entries": [
+        {
+          "summary": "Added AsExisting API for referencing existing Azure resources in both run/publish modes",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/c08fe91"
+        },
+        {
+          "summary": "Added existing resource support to Azure Redis, SQL Server, Key Vault, and Event Hubs",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/ea820e7"
+        },
+        {
+          "summary": "Implemented Service Bus existing resource references",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/4e1a0f2"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-01-27",
+      "entries": [
+        {
+          "summary": "Added restore.sh script for easier Aspire development setup",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/395f3fa"
+        },
+        {
+          "summary": "Fixed dotnet-getdocument packaging to use current target framework",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/133f9c5"
+        },
+        {
+          "summary": "Added support for CosmosDB triggers in Azure Functions",
+          "repo": "dotnet/aspire",
+          "url": "https://github.com/dotnet/aspire/commit/af28155"
+        }
+      ]
+    },
+    {
+      "weekOf": "2025-01-20",
+      "entries": [
+        {
+          "summary": "Updated to Microsoft.OpenApi v2.0.0-preview5",
+          "repo": "dotnet/aspnetcore",
+          "url": "https://github.com/dotnet/aspnetcore/commit/aa38ac3"
+        }
+      ]
+    }
+  ]
+}

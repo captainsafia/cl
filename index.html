@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Captain's Log</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['JetBrains Mono', 'SF Mono', 'Menlo', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased font-mono">
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="mb-8">
+      <a href="https://captainsafia.com" class="text-gray-400 hover:text-gray-600 transition-colors text-sm">
+        ← captainsafia.com
+      </a>
+    </nav>
+
+    <header class="mb-16">
+      <h1 class="text-3xl font-semibold tracking-tight mb-2">The Captain's Log</h1>
+      <p class="text-gray-500">A weekly changelog of my open source work.</p>
+    </header>
+
+    <main id="changelog" class="space-y-12">
+      <!-- Weeks will be rendered here -->
+    </main>
+
+    <div id="loading" class="hidden text-center py-8 text-gray-400">
+      Loading more...
+    </div>
+
+    <footer class="mt-20 pt-8 border-t border-gray-100 text-sm text-gray-400">
+      <p>Built by <a href="https://github.com/captainsafia" class="text-gray-600 hover:text-gray-900 transition-colors">@captainsafia</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

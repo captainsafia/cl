@@ -1,0 +1,147 @@
+name: Update Changelog
+
+on:
+  schedule:
+    - cron: '0 23 * * 0'  # Weekly on Sunday at 11pm UTC
+  workflow_dispatch:      # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Warp CLI repository
+        run: |
+          sudo curl -fsSL https://releases.warp.dev/linux/keys/warp.asc | sudo gpg --yes --dearmor -o /usr/share/keyrings/warp-terminal-archive-keyring.gpg
+          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/warp-terminal-archive-keyring.gpg] https://releases.warp.dev/linux/deb stable main" | sudo tee /etc/apt/sources.list.d/warp-terminal.list
+          sudo apt-get update
+          sudo apt-get install -y warp-cli
+
+      - name: Fetch recent commits
+        id: fetch-commits
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Calculate date for one week ago
+          ONE_WEEK_AGO=$(date -d '7 days ago' +%Y-%m-%d)
+          
+          # Fetch commits from dotnet org authored by captainsafia
+          COMMITS_DOTNET=$(gh api "/search/commits?q=author:captainsafia+org:dotnet+committer-date:>${ONE_WEEK_AGO}&sort=committer-date&order=desc&per_page=100" \
+            --jq '[.items[] | {date: .commit.committer.date[0:10], repo: .repository.full_name, message: .commit.message | split("\n")[0], url: .html_url}]')
+          
+          # Fetch commits from all captainsafia org/user repos
+          COMMITS_ORG=$(gh api "/search/commits?q=author:captainsafia+user:captainsafia+committer-date:>${ONE_WEEK_AGO}&sort=committer-date&order=desc&per_page=100" \
+            --jq '[.items[] | {date: .commit.committer.date[0:10], repo: .repository.full_name, message: .commit.message | split("\n")[0], url: .html_url}]' 2>/dev/null || echo '[]')
+          
+          # Merge and dedupe commits
+          ALL_COMMITS=$(echo "$COMMITS_DOTNET $COMMITS_ORG" | jq -s 'add | unique_by(.url)')
+          
+          # Save to file for the next step
+          echo "$ALL_COMMITS" > /tmp/commits.json
+          
+          # Check if we have any commits
+          COMMIT_COUNT=$(echo "$ALL_COMMITS" | jq 'length')
+          echo "commit_count=$COMMIT_COUNT" >> $GITHUB_OUTPUT
+          
+          if [ "$COMMIT_COUNT" -eq "0" ]; then
+            echo "No new commits found in the past week"
+          else
+            echo "Found $COMMIT_COUNT commits"
+          fi
+
+      - name: Generate changelog with Warp CLI
+        if: steps.fetch-commits.outputs.commit_count != '0'
+        env:
+          WARP_API_KEY: ${{ secrets.WARP_API_KEY }}
+        run: |
+          COMMITS=$(cat /tmp/commits.json)
+          WEEK_OF=$(date -d 'last monday' +%Y-%m-%d)
+          
+          # Create prompt for Warp
+          PROMPT="Analyze the following Git commits and create a weekly changelog summary.
+
+          Rules:
+          - Generate MAX 5-7 bullet points total
+          - If there are more commits, consolidate related changes into single bullets
+          - Use concise, user-friendly language (no commit hashes or technical jargon)
+          - Group related changes by theme (e.g., 'bug fixes', 'new features', 'docs')
+          - Each bullet should describe the user-facing impact or purpose
+
+          Output ONLY a valid JSON array with this exact format (no markdown, no explanation):
+          [
+            {\"summary\": \"Description of change\", \"repo\": \"org/repo\", \"url\": \"https://...\"}
+          ]
+
+          Commits to analyze:
+          $COMMITS"
+          
+          # Run Warp agent and capture output
+          RESPONSE=$(warp agent run --prompt "$PROMPT" 2>/dev/null || echo "[]")
+          
+          # Extract JSON from response (in case there's extra text)
+          ENTRIES=$(echo "$RESPONSE" | grep -o '\[.*\]' | head -1 || echo "[]")
+          
+          # Validate JSON
+          if ! echo "$ENTRIES" | jq . > /dev/null 2>&1; then
+            echo "Invalid JSON response from Warp, using empty array"
+            ENTRIES="[]"
+          fi
+          
+          # Create new week entry
+          NEW_WEEK=$(jq -n --arg weekOf "$WEEK_OF" --argjson entries "$ENTRIES" \
+            '{weekOf: $weekOf, entries: $entries}')
+          
+          # Save for merge step
+          echo "$NEW_WEEK" > /tmp/new_week.json
+
+      - name: Merge into changelog
+        if: steps.fetch-commits.outputs.commit_count != '0'
+        run: |
+          NEW_WEEK=$(cat /tmp/new_week.json)
+          WEEK_OF=$(echo "$NEW_WEEK" | jq -r '.weekOf')
+          
+          # Check if entries array is empty
+          ENTRY_COUNT=$(echo "$NEW_WEEK" | jq '.entries | length')
+          if [ "$ENTRY_COUNT" -eq "0" ]; then
+            echo "No entries generated, skipping update"
+            exit 0
+          fi
+          
+          # Read existing changelog
+          CHANGELOG=$(cat data/changelog.json)
+          
+          # Check if this week already exists
+          EXISTING=$(echo "$CHANGELOG" | jq --arg week "$WEEK_OF" '.weeks[] | select(.weekOf == $week)')
+          
+          if [ -n "$EXISTING" ]; then
+            # Update existing week by merging entries
+            UPDATED=$(echo "$CHANGELOG" | jq --arg week "$WEEK_OF" --argjson newWeek "$NEW_WEEK" '
+              .weeks |= map(if .weekOf == $week then .entries += $newWeek.entries else . end)
+            ')
+          else
+            # Add new week at the beginning
+            UPDATED=$(echo "$CHANGELOG" | jq --argjson newWeek "$NEW_WEEK" '.weeks = [$newWeek] + .weeks')
+          fi
+          
+          # Write back
+          echo "$UPDATED" | jq '.' > data/changelog.json
+
+      - name: Commit and push changes
+        if: steps.fetch-commits.outputs.commit_count != '0'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add data/changelog.json
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update changelog for week of $(date -d 'last monday' +%Y-%m-%d)"
+            git push
+          fi
