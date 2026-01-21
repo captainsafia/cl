@@ -50,6 +50,16 @@ function renderNextBatch() {
   }
 }
 
+function toStardate(date) {
+  // TNG-era stardate: year + fractional day of year
+  const year = date.getFullYear();
+  const startOfYear = new Date(year, 0, 0);
+  const diff = date - startOfYear;
+  const dayOfYear = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const stardate = (year - 2323) * 1000 + (dayOfYear / 365.25) * 1000;
+  return stardate.toFixed(1);
+}
+
 function createWeekElement(week) {
   const section = document.createElement('section');
   section.className = 'fade-in';
@@ -60,9 +70,12 @@ function createWeekElement(week) {
     day: 'numeric',
     year: 'numeric'
   });
+  const stardate = toStardate(weekDate);
 
   section.innerHTML = `
-    <h2 class="text-sm font-medium text-gray-400 uppercase tracking-wide mb-4">
+    <h2 class="text-sm font-medium text-gray-400 uppercase tracking-wide mb-4 cursor-default week-header"
+        data-normal="Week of ${formattedDate}"
+        data-stardate="Stardate ${stardate}">
       Week of ${formattedDate}
     </h2>
     <ul class="space-y-3">
@@ -119,6 +132,16 @@ function escapeHtml(text) {
   div.textContent = text;
   return div.innerHTML;
 }
+
+// Easter egg: swap to stardate on hover
+document.addEventListener('mouseover', (e) => {
+  const header = e.target.closest('.week-header');
+  if (header) header.textContent = header.dataset.stardate;
+});
+document.addEventListener('mouseout', (e) => {
+  const header = e.target.closest('.week-header');
+  if (header) header.textContent = header.dataset.normal;
+});
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', init);
