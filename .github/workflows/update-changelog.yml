@@ -15,13 +15,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Warp CLI repository
-        run: |
-          sudo curl -fsSL https://releases.warp.dev/linux/keys/warp.asc | sudo gpg --yes --dearmor -o /usr/share/keyrings/warp-terminal-archive-keyring.gpg
-          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/warp-terminal-archive-keyring.gpg] https://releases.warp.dev/linux/deb stable main" | sudo tee /etc/apt/sources.list.d/warp-terminal.list
-          sudo apt-get update
-          sudo apt-get install -y warp-cli
-
       - name: Fetch recent commits
         id: fetch-commits
         env:
@@ -54,36 +47,56 @@ jobs:
             echo "Found $COMMIT_COUNT commits"
           fi
 
-      - name: Generate changelog with Warp CLI
+      - name: Construct prompt
         if: steps.fetch-commits.outputs.commit_count != '0'
-        env:
-          WARP_API_KEY: ${{ secrets.WARP_API_KEY }}
+        id: prompt
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const commits = JSON.parse(fs.readFileSync('/tmp/commits.json', 'utf8'));
+
+            let commitText = '';
+            for (const commit of commits) {
+              commitText += `- ${commit.message} (${commit.repo})\n`;
+              commitText += `  URL: ${commit.url}\n`;
+            }
+
+            const prompt = `Analyze the following Git commits and create a weekly changelog summary.
+
+            Rules:
+            - Generate MAX 5-7 bullet points total
+            - If there are more commits, consolidate related changes into single bullets
+            - Use concise, user-friendly language (no commit hashes or technical jargon)
+            - Group related changes by theme (e.g., 'bug fixes', 'new features', 'docs')
+            - Each bullet should describe the user-facing impact or purpose
+
+            Output ONLY a valid JSON array with this exact format (no markdown, no explanation):
+            [
+              {"summary": "Description of change", "repo": "org/repo", "url": "https://..."}
+            ]
+
+            Commits to analyze:
+            ${commitText}`;
+
+            core.setOutput('prompt', prompt);
+
+      - name: Generate changelog with Warp Agent
+        if: steps.fetch-commits.outputs.commit_count != '0'
+        uses: warpdotdev/warp-agent-action@v1
+        id: agent
+        with:
+          prompt: ${{ steps.prompt.outputs.prompt }}
+          warp_api_key: ${{ secrets.WARP_API_KEY }}
+          output_format: json
+
+      - name: Process agent output
+        if: steps.fetch-commits.outputs.commit_count != '0'
         run: |
-          COMMITS=$(cat /tmp/commits.json)
           WEEK_OF=$(date -d 'last monday' +%Y-%m-%d)
+          RESPONSE='${{ steps.agent.outputs.agent_output }}'
           
-          # Create prompt for Warp
-          PROMPT="Analyze the following Git commits and create a weekly changelog summary.
-
-          Rules:
-          - Generate MAX 5-7 bullet points total
-          - If there are more commits, consolidate related changes into single bullets
-          - Use concise, user-friendly language (no commit hashes or technical jargon)
-          - Group related changes by theme (e.g., 'bug fixes', 'new features', 'docs')
-          - Each bullet should describe the user-facing impact or purpose
-
-          Output ONLY a valid JSON array with this exact format (no markdown, no explanation):
-          [
-            {\"summary\": \"Description of change\", \"repo\": \"org/repo\", \"url\": \"https://...\"}
-          ]
-
-          Commits to analyze:
-          $COMMITS"
-          
-          # Run Warp agent and capture output
-          RESPONSE=$(warp agent run --prompt "$PROMPT" 2>/dev/null || echo "[]")
-          
-          # Extract JSON from response (in case there's extra text)
+          # Extract JSON array from response (in case there's extra text)
           ENTRIES=$(echo "$RESPONSE" | grep -o '\[.*\]' | head -1 || echo "[]")
           
           # Validate JSON
