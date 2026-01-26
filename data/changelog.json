@@ -17,6 +17,36 @@
           "summary": "Added VS Code extension bundling and improved LSP server startup in Hone",
           "repo": "captainsafia/hone",
           "url": "https://github.com/captainsafia/hone/commit/b1065f5"
+        },
+        {
+          "summary": "Launched new personal website with initial content",
+          "repo": "captainsafia/safia.dev",
+          "url": "https://github.com/captainsafia/safia.dev/commit/89f9ab43c96748bd98d4313ea7147e96649806c5"
+        },
+        {
+          "summary": "Refreshed documentation sites and improved UX across multiple projects",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/7469b4ab28a569bbff1a31438f624652382b606f"
+        },
+        {
+          "summary": "Added sharing capabilities and workflow improvements to cl project",
+          "repo": "captainsafia/cl",
+          "url": "https://github.com/captainsafia/cl/commit/c114ffa58e5fac55100b3a683f15f6bffceeb9cd"
+        },
+        {
+          "summary": "Enhanced test output formatting and added file watcher support in hone",
+          "repo": "captainsafia/hone",
+          "url": "https://github.com/captainsafia/hone/commit/4eeaee4e500d274b6dbe618a99283217cd73a666"
+        },
+        {
+          "summary": "Fixed cross-platform compatibility and build issues across multiple projects",
+          "repo": "captainsafia/hone",
+          "url": "https://github.com/captainsafia/hone/commit/2906155852dea4d0f359c2722a0764819843ba4b"
+        },
+        {
+          "summary": "Added website metadata, icons, and Projects link to portfolio",
+          "repo": "captainsafia/cl",
+          "url": "https://github.com/captainsafia/cl/commit/799cec3b139805712ece28b62d0c6872de25b4a2"
         }
       ]
     },
