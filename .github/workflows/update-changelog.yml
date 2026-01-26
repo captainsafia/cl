@@ -71,7 +71,7 @@ jobs:
             - Group related changes by theme (e.g., 'bug fixes', 'new features', 'docs')
             - Each bullet should describe the user-facing impact or purpose
 
-            Output ONLY a valid JSON array with this exact format (no markdown, no explanation):
+            Output ONLY a valid JSON array with this exact format (no markdown, no explanation, no summary):
             [
               {"summary": "Description of change", "repo": "org/repo", "url": "https://..."}
             ]
