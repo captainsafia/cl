@@ -89,6 +89,7 @@ jobs:
           prompt: ${{ steps.prompt.outputs.prompt }}
           warp_api_key: ${{ secrets.WARP_API_KEY }}
           output_format: json
+          share: true
 
       - name: Process agent output
         if: steps.fetch-commits.outputs.commit_count != '0'
