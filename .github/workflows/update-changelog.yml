@@ -98,20 +98,20 @@ jobs:
         run: |
           WEEK_OF=$(date -d 'last monday' +%Y-%m-%d)
           RESPONSE='${{ steps.agent.outputs.agent_output }}'
-
-          # Extract JSON array from response (in case there's extra text)
-          ENTRIES=$(echo "$RESPONSE" | grep -o '\[.*\]' | head -1 || echo "[]")
-
+          
+          # Extract JSON from code block (```json ... ```)
+          ENTRIES=$(echo "$RESPONSE" | sed -n '/^```json$/,/^```$/p' | sed '1d;$d' || echo "[]")
+          
           # Validate JSON
           if ! echo "$ENTRIES" | jq . > /dev/null 2>&1; then
             echo "Invalid JSON response from Warp, using empty array"
             ENTRIES="[]"
           fi
-
+          
           # Create new week entry
           NEW_WEEK=$(jq -n --arg weekOf "$WEEK_OF" --argjson entries "$ENTRIES" \
             '{weekOf: $weekOf, entries: $entries}')
-
+          
           # Save for merge step
           echo "$NEW_WEEK" > /tmp/new_week.json
 
