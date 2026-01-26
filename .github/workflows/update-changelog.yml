@@ -104,7 +104,8 @@ jobs:
           echo "========================"
 
           # Extract JSON from code block (```json ... ```)
-          ENTRIES=$(echo "$RESPONSE" | sed -n '/^```json$/,/^```$/p' | sed '1d;$d')
+          # Note: JSON may start on same line as ```json marker
+          ENTRIES=$(echo "$RESPONSE" | sed -n '/^```json/,/^```$/p' | sed '1s/^```json//; $d')
 
           echo "=== Extracted entries ==="
           echo "$ENTRIES"
