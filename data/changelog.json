@@ -1,6 +1,46 @@
 {
   "weeks": [
     {
+      "weekOf": "2026-01-26",
+      "entries": [
+        {
+          "summary": "Added sharing support in Warp action",
+          "repo": "captainsafia/cl",
+          "url": "https://github.com/captainsafia/cl/commit/c114ffa58e5fac55100b3a683f15f6bffceeb9cd"
+        },
+        {
+          "summary": "Improved JSON parsing and email configuration",
+          "repo": "captainsafia/cl",
+          "url": "https://github.com/captainsafia/cl/commit/40303d1113ef49b429096b81921155171c3fbc93"
+        },
+        {
+          "summary": "Enhanced workflow with better logging and prompt optimization",
+          "repo": "captainsafia/cl",
+          "url": "https://github.com/captainsafia/cl/commit/96ef9e576b9433067bb07a3ca8641d84714089b0"
+        },
+        {
+          "summary": "Released version 1.4.0 with changelog generation and improved update checks",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/349f19a3437043df08820604c6678ada8c907bd6"
+        },
+        {
+          "summary": "Added integration tests for better quality assurance",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/c886473e5c566f64162759734f281212b13e62f6"
+        },
+        {
+          "summary": "Launched GitHub Action for automated testing",
+          "repo": "captainsafia/hone",
+          "url": "https://github.com/captainsafia/hone/commit/8ee58bfbbff70deebf6e18350863c2b9e1993d81"
+        },
+        {
+          "summary": "Added llms.txt documentation support and documentation update checks",
+          "repo": "captainsafia/hone",
+          "url": "https://github.com/captainsafia/hone/commit/2338ab9c7c971020a64d1a96e6249ba3c3fb0799"
+        }
+      ]
+    },
+    {
       "weekOf": "2026-01-19",
       "entries": [
         {
