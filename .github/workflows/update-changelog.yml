@@ -85,7 +85,7 @@ jobs:
 
       - name: Generate changelog with Warp Agent
         if: steps.fetch-commits.outputs.commit_count != '0'
-        uses: warpdotdev/warp-agent-action@v1
+        uses: warpdotdev/oz-agent-action@333c6e7f21ef9cdf00c7b89134dfca621bb42202
         id: agent
         with:
           prompt: ${{ steps.prompt.outputs.prompt }}
