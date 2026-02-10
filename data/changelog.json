@@ -1,6 +1,26 @@
 {
   "weeks": [
     {
+      "weekOf": "2026-02-09",
+      "entries": [
+        {
+          "summary": "Added dark/light mode toggle for improved site accessibility",
+          "repo": "captainsafia/captainsafia.github.io",
+          "url": "https://github.com/captainsafia/captainsafia.github.io/commit/5194d787161d39082664a12174c0971b251d35ea"
+        },
+        {
+          "summary": "Improved changelog automation workflow with updated agent configuration",
+          "repo": "captainsafia/cl",
+          "url": "https://github.com/captainsafia/cl/commit/1551ad84a18c3fc40362544fc167bd115014fb69"
+        },
+        {
+          "summary": "Added AI agent skill for Grove CLI development workflows",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/849667f40888b388fcdca22701c8d9b7cee52f82"
+        }
+      ]
+    },
+    {
       "weekOf": "2026-01-26",
       "entries": [
         {
