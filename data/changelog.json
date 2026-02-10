@@ -17,6 +17,21 @@
           "summary": "Added AI agent skill for Grove CLI development workflows",
           "repo": "captainsafia/grove",
           "url": "https://github.com/captainsafia/grove/commit/849667f40888b388fcdca22701c8d9b7cee52f82"
+        },
+        {
+          "summary": "Added dark/light mode toggle for improved reading experience",
+          "repo": "captainsafia/captainsafia.github.io",
+          "url": "https://github.com/captainsafia/captainsafia.github.io/commit/5194d787161d39082664a12174c0971b251d35ea"
+        },
+        {
+          "summary": "Updated changelog automation workflow with improved agent action configuration",
+          "repo": "captainsafia/cl",
+          "url": "https://github.com/captainsafia/cl/commit/b8b7497a0e0f933aa64914dea47509c1d512221f"
+        },
+        {
+          "summary": "Added agent skill for grove development support",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/849667f40888b388fcdca22701c8d9b7cee52f82"
         }
       ]
     },
