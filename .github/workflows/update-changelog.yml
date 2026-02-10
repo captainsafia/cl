@@ -90,6 +90,7 @@ jobs:
         with:
           prompt: ${{ steps.prompt.outputs.prompt }}
           warp_api_key: ${{ secrets.WARP_API_KEY }}
+          oz_channel: preview
           share: |
             safia@safia.rocks
 
