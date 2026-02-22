@@ -1,6 +1,26 @@
 {
   "weeks": [
     {
+      "weekOf": "2026-02-16",
+      "entries": [
+        {
+          "summary": "Migrated Grove from TypeScript to Rust to improve performance and long-term maintainability.",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/125226e5a7c6a3adcc19c45650ee6d0cbc1f72a3"
+        },
+        {
+          "summary": "Improved Grove changelog generation so release notes are more reliable.",
+          "repo": "captainsafia/grove",
+          "url": "https://github.com/captainsafia/grove/commit/0c711168edcaea17fef9809c33eef126bc4a8958"
+        },
+        {
+          "summary": "Set up and expanded a dedicated test repository for malformed skill-file scenarios.",
+          "repo": "captainsafia/bad-skill-test",
+          "url": "https://github.com/captainsafia/bad-skill-test/commit/85e379a068751845f155616110b3eb983db6a3b9"
+        }
+      ]
+    },
+    {
       "weekOf": "2026-02-09",
       "entries": [
         {
