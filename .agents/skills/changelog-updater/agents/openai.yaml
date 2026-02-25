@@ -1,0 +1,4 @@
+interface:
+  display_name: "Changelog Updater"
+  short_description: "Fetch recent commits and update weekly changelog entries."
+  default_prompt: "Update data/changelog.json by summarizing my most recent commits into natural-language weekly entries."

@@ -11,13 +11,13 @@ Use this prompt to recreate or adapt this project:
 **Build a personal changelog website with the following specifications:**
 
 ### Overview
-Create a static site that displays weekly summaries of GitHub contributions, automatically updated via GitHub Actions.
+Create a static site that displays weekly summaries of GitHub contributions, updated via an on-demand Codex skill.
 
 ### Tech Stack
 - **Frontend**: Vanilla HTML/JS with Tailwind CSS (via CDN)
 - **Font**: JetBrains Mono (monospace)
 - **Data**: Static JSON file (`data/changelog.json`)
-- **Automation**: GitHub Actions workflow with AI summarization
+- **Automation**: Codex skill (`.agents/skills/changelog-updater`) with AI summarization
 
 ### Data Structure
 
@@ -54,9 +54,9 @@ When hovering over a week header, convert the date to a Star Trek TNG-era starda
 stardate = (year - 2323) * 1000 + (dayOfYear / 365.25) * 1000
 ```
 
-### GitHub Actions Workflow
+### Changelog Skill Workflow
 
-**Trigger**: Weekly on Sunday at 11pm UTC + manual dispatch
+**Trigger**: On demand when the `changelog-updater` skill is invoked
 
 **Steps**:
 1. Fetch commits from the past week using GitHub API search:
